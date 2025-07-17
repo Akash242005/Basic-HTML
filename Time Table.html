@@ -29,7 +29,7 @@
                 <th>MON</th>
                 <td>AE</td>
                 <td>ME</td>
-                <td rowspan="5" style="writing-mode: vertical-lr; text-align: center;">BREAK</td>
+                <td rowspan="5" style="writing-mode:vertical-rl; text-align: center;">BREAK</td>
                 <td>MPE</td>
                 <td>ML</td>
                 <td rowspan="5" style="writing-mode:vertical-lr;text-align:center">LUNCH</td>
@@ -75,6 +75,58 @@
             </tr>
         </tbody>
     </table>
+    <br>
+    <hr>
+    <br>
+    <form>
+        <fieldset><h1>USER REGISTRATION</h1></fieldset>
+        <br>
+        <table>
+            <tr>
+                <td>NAME : </td>
+                <td><input type="text" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td><input type="password" placeholder="Enter the password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password : </td>
+                <td><input type="password" placeholder="Re-Enter the password"></td>
+            </tr>
+            <tr>
+                <td>E-mail : </td>
+                <td><input type="email" placeholder="Enter the email"></td>
+            </tr>
+            <tr>
+                <td>Account Type : </td>
+                <td><input type="radio" id="java"><label for="java">Standard</label> 
+                    <input type="radio" id="html"><label for="html">Premium</label>
+                    <input type="radio" id="admin"><label for="admin">Admin</label></td>
+            </tr>
+            <tr>
+                <td>Preffered Language :  </td>
+                <td><select name="country" id="contry">
+                    <option value="India">English</option>
+                    <option value="US">Tamil</option>
+                    <option value="China">Chinese</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Notes : </td>
+                <td><textarea placeholder="Notes"></textarea></td>
+            </tr>
+        </table>
+        <button id="submit" onclick="prinTtext()">SUBMIT</button>
+        <h1 id="text1" ></h1>
+    </form>
     </center>
+    <script>
+        var text1 = document.getElementById("text1");
+        var submit = document.getElementById("submit");
+        function prinTtext(){
+            text1.textContent = "Form Submitted"
+        }
+    </script>
 </body>
 </html>
